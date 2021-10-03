@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+@import-normalize;
+
+.cardslider {
+    position: relative;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cardObject {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    font-size: 1.5rem;
+    color: blue;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.left-arrow {
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    font-size: 1.5rem;
+    color: blue;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
 }
 
-.App-link {
-  color: #61dafb;
+.slide {
+    opacity: 0;
+    transition-duration: 1s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.0);
+}
+
+.visa {
+    position: relative;
+    font-size: 2.5rem;
+    color: blue;
+    user-select: none;
+    z-index: 10;
+
+}
+
+.mastercard {
+    position: relative;
+    font-size: 2.5rem;
+    color: blue;
+    user-select: none;
+    z-index: 10;
+
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
